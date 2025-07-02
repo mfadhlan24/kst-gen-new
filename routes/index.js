@@ -32,7 +32,8 @@ const nim = `${angkatan}${randomDigits}`;
     nim,
     strata,
     prodi,
-    konsentrasi
+    konsentrasi,
+    namaDosen: faker.person.fullName()
   });
 });
 

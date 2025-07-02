@@ -95,7 +95,11 @@
 
     <p class="mt-6 text-center">Data di-generate server-side menggunakan Faker.js + client-side table randomizer</p>
   </div>
-
+<script type="module">
+  import { Faker, id_ID } from "https://cdn.jsdelivr.net/npm/@faker-js/faker@8.4.0/+esm";
+  const faker = new Faker({ locale: [id_ID] });
+  window.faker = faker;
+</script>
   <script src="/js/kst.js"></script>
 </body>
 </html>

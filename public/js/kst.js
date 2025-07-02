@@ -32,9 +32,11 @@ function getRandom(arr) {
 function generateDosenName() {
   const gelar1 = ["S.Kom.", "S.T.", "S.Si.", "Ir.", "Dr.", "Drs.", "Dra."];
   const gelar2 = ["M.T.I.", "M.Kom.", "M.M.", "M.T.", "M.Si.", "Ph.D.", "M.Sc."];
-  const namaAcak = "Dosen " + Math.floor(Math.random() * 100); // lebih stabil offline
-  return `${namaAcak}, ${getRandom(gelar1)}, ${getRandom(gelar2)}`;
+
+  const namaRandom =  faker.person.fullName();  // ini nama random dari faker
+  return `${namaRandom}, ${getRandom(gelar1)}, ${getRandom(gelar2)}`;
 }
+
 
 function generateRandomPhone() {
   return "08" + Math.floor(Math.random() * 900000000 + 100000000);
